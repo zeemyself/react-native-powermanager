@@ -37,7 +37,8 @@ public class RNPowermanagerModule extends ReactContextBaseJavaModule {
             new Intent().setComponent(new ComponentName("com.iqoo.secure", "com.iqoo.secure.ui.phoneoptimize.AddWhiteListActivity")),
             new Intent().setComponent(new ComponentName("com.iqoo.secure", "com.iqoo.secure.ui.phoneoptimize.BgStartUpManager")),
             new Intent().setComponent(new ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity")),
-            new Intent().setComponent(new ComponentName("com.asus.mobilemanager", "com.asus.mobilemanager.entry.FunctionActivity")).setData(Uri.parse("mobilemanager://function/entry/AutoStart"))
+            new Intent().setComponent(new ComponentName("com.asus.mobilemanager", "com.asus.mobilemanager.entry.FunctionActivity")).setData(Uri.parse("mobilemanager://function/entry/AutoStart")),
+            new Intent().setComponent(new ComponentName("com.samsung.android.lool", "com.samsung.android.sm.ui.battery.BatteryActivity"))
     };
 
     @ReactMethod
@@ -46,6 +47,7 @@ public class RNPowermanagerModule extends ReactContextBaseJavaModule {
         for (Intent intent : POWERMANAGER_INTENTS)
             if (reactContext.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
                 // show dialog to ask user action
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 reactContext.startActivity(intent);
                 break;
             }
