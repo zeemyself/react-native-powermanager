@@ -15,7 +15,7 @@ public class RNPowermanagerModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
 
-  public RNReactNativePowermanagerModule(ReactApplicationContext reactContext) {
+  public RNPowermanagerModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
   }

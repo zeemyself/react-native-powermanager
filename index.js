@@ -1,12 +1,12 @@
 
 import { NativeModules, Platform } from 'react-native';
 
-const { RNReactNativePowermanager } = NativeModules;
+const { RNPowermanager } = NativeModules;
 
-export default {
+export default PowerManager = {
     startPowerManager: () => {
         if(Platform.OS === 'android') {
-            return RNReactNativePowermanager.startPowerManager()
+            return RNPowermanager.startPowerManager()
         }
     }
 }
