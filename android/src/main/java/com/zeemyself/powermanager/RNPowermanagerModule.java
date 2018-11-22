@@ -10,6 +10,9 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class RNPowermanagerModule extends ReactContextBaseJavaModule {
 
@@ -52,7 +55,6 @@ public class RNPowermanagerModule extends ReactContextBaseJavaModule {
             }
     }
 
-    @ReactMethod
     public Boolean isSupported() {
         for (Intent intent : POWERMANAGER_INTENTS) {
             if (reactContext.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
@@ -65,7 +67,7 @@ public class RNPowermanagerModule extends ReactContextBaseJavaModule {
     @Override
     public Map<String, Object> getConstants() {
         final Map<String, Object> constants = new HashMap<>();
-        constants.put('isSupported', this.isSupported());
+        constants.put("isSupported", isSupported());
         return constants;
     }
 
