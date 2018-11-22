@@ -11,7 +11,7 @@ export default PowerManager = {
     },
     isSupported: () => {
         if(Platform.OS === 'android') {
-            return RNPowermanager.isSupported()
+            return RNPowermanager.isSupported
         }
     }
 }

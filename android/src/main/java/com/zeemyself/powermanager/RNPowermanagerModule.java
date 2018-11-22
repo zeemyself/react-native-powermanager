@@ -62,4 +62,11 @@ public class RNPowermanagerModule extends ReactContextBaseJavaModule {
         return false;
     }
 
+    @Override
+    public Map<String, Object> getConstants() {
+        final Map<String, Object> constants = new HashMap<>();
+        constants.put('isSupported', this.isSupported());
+        return constants;
+    }
+
 }
