@@ -8,5 +8,10 @@ export default PowerManager = {
         if(Platform.OS === 'android') {
             return RNPowermanager.startPowerManager()
         }
+    },
+    isSupported: () => {
+        if(Platform.OS === 'android') {
+            return RNPowermanager.isSupported()
+        }
     }
 }

@@ -42,8 +42,7 @@ public class RNPowermanagerModule extends ReactContextBaseJavaModule {
     };
 
     @ReactMethod
-    public void startPowerManager()
-    {
+    public void startPowerManager() {
         for (Intent intent : POWERMANAGER_INTENTS)
             if (reactContext.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
                 // show dialog to ask user action
@@ -51,6 +50,16 @@ public class RNPowermanagerModule extends ReactContextBaseJavaModule {
                 reactContext.startActivity(intent);
                 break;
             }
+    }
+
+    @ReactMethod
+    public Boolean isSupported() {
+        for (Intent intent : POWERMANAGER_INTENTS) {
+            if (reactContext.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
