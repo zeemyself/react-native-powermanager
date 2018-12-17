@@ -1,8 +1,7 @@
-
 {
-  "name": "react-native-powermanager",
+  "name": "@zeemyself/react-native-powermanager",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Getting started",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +9,19 @@
   "keywords": [
     "react-native"
   ],
-  "author": "",
-  "license": "",
+  "author": "zeemyself",
+  "license": "ISC",
   "peerDependencies": {
     "react-native": "^0.57.0"
-  }
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeemyself/react-native-powermanager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zeemyself/react-native-powermanager/issues"
+  },
+  "homepage": "https://github.com/zeemyself/react-native-powermanager#readme"
 }

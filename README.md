@@ -3,11 +3,12 @@
 
 ## Getting started
 
-`$ npm install react-native-powermanager --save`
+`$ npm install @zeemyself/react-native-powermanager --save`
+`$ yarn add @zeemyself/react-native-powermanager`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-powermanager`
+`$ react-native link @zeemyself/react-native-powermanager`
 
 ### Manual installation
 
@@ -19,20 +20,19 @@
   - Add `new RNPowermanagerPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
-  	include ':react-native-powermanager'
-  	project(':react-native-powermanager').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-powermanager/android')
+  	include ':@zeemyself_react-native-powermanager'
+  	project(':@zeemyself_react-native-powermanager').projectDir = new File(rootProject.projectDir, 	'../node_modules/@zeemyself/react-native-powermanager/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-powermanager')
+      compile project(':@zeemyself_react-native-powermanager')
   	```
 
 
 ## Usage
 ```javascript
-import RNPowermanager from 'react-native-powermanager';
+import RNPowermanager from '@zeemyself/react-native-powermanager';
 
 // TODO: What to do with the module?
 RNReactNativePowermanager;
 ```
-  
