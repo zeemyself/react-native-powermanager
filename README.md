@@ -1,10 +1,23 @@
 
 # react-native-powermanager
 
+[![](https://img.shields.io/npm/v/@zeemyself/react-native-powermanager.svg)](https://www.npmjs.com/package/@zeemyself/react-native-powermanager)
+[![](https://img.shields.io/npm/dt/@zeemyself/react-native-powermanager.svg)](https://www.npmjs.com/package/@zeemyself/react-native-powermanager)
+
 ## Getting started
 
-`$ npm install @zeemyself/react-native-powermanager --save`
-`$ yarn add @zeemyself/react-native-powermanager`
+yarn
+```
+# npm
+
+npm install @zeemyself/react-native-powermanager --save
+```
+
+```
+# yarn
+
+$ yarn add @zeemyself/react-native-powermanager
+```
 
 ### Mostly automatic installation
 
@@ -31,8 +44,9 @@
 
 ## Usage
 ```javascript
-import RNPowermanager from '@zeemyself/react-native-powermanager';
+import PowerManager from '@zeemyself/react-native-powermanager';
 
-// TODO: What to do with the module?
-RNReactNativePowermanager;
+if(PowerManager.isSupported()) {
+	PowerManager.startPowerManager();
+}
 ```
