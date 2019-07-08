@@ -1,6 +1,6 @@
 {
   "name": "@zeemyself/react-native-powermanager",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "## Getting started",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "author": "zeemyself",
   "license": "ISC",
   "peerDependencies": {
-    "react-native": "^0.57.0"
+    "react-native": "^0.59.0"
   },
   "dependencies": {},
   "devDependencies": {
