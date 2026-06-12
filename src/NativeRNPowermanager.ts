@@ -8,4 +8,4 @@ export interface Spec extends TurboModule {
   };
 }
 
-export default TurboModuleRegistry.getEnforcing<Spec>('RNPowermanager');
+export default TurboModuleRegistry.get<Spec>('RNPowermanager');

@@ -20,6 +20,7 @@ if (isNewArchitectureEnabled()) {
 }
 
 android {
+    namespace "com.zeemyself.powermanager"
     compileSdkVersion 34
     buildToolsVersion "34.0.0"
 

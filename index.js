@@ -1,11 +1,6 @@
 
-import { NativeModules, Platform } from 'react-native';
-
-const isTurboModuleEnabled = global.__turboModuleProxy != null;
-
-const RNPowermanager = isTurboModuleEnabled
-  ? require('./src/NativeRNPowermanager').default
-  : NativeModules.RNPowermanager;
+import { Platform } from 'react-native';
+import RNPowermanager from './src/NativeRNPowermanager';
 
 // Cache constants for isSupported if RNPowermanager exists
 const constants = RNPowermanager
@@ -27,4 +22,3 @@ export default PowerManager = {
         return false;
     }
 };
-
