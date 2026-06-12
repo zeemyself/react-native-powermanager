@@ -13,7 +13,7 @@
   "author": "zeemyself",
   "license": "ISC",
   "peerDependencies": {
-    "react-native": ">=0.71.0"
+    "react-native": ">=0.77.0"
   },
   "devDependencies": {
     "standard-version": "^9.5.0"
