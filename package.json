@@ -13,10 +13,18 @@
   "author": "zeemyself",
   "license": "ISC",
   "peerDependencies": {
-    "react-native": ">=0.60.0"
+    "react-native": ">=0.77.0"
   },
   "devDependencies": {
     "standard-version": "^9.5.0"
+  },
+  "codegenConfig": {
+    "name": "RNPowermanagerSpec",
+    "type": "modules",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "com.zeemyself.powermanager"
+    }
   },
   "repository": {
     "type": "git",

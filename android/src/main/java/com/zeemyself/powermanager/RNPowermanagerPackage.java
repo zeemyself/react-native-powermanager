@@ -1,27 +1,39 @@
 package com.zeemyself.powermanager;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
-import com.facebook.react.ReactPackage;
+import com.facebook.react.TurboReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.uimanager.ViewManager;
-import com.facebook.react.bridge.JavaScriptModule;
-public class RNPowermanagerPackage implements ReactPackage {
-    @Override
-    public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new RNPowermanagerModule(reactContext));
-    }
+import com.facebook.react.module.model.ReactModuleInfo;
+import com.facebook.react.module.model.ReactModuleInfoProvider;
+import java.util.HashMap;
+import java.util.Map;
 
-    // Deprecated from RN 0.47
-    public List<Class<? extends JavaScriptModule>> createJSModules() {
-      return Collections.emptyList();
-    }
+public class RNPowermanagerPackage extends TurboReactPackage {
 
     @Override
-    public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-      return Collections.emptyList();
+    public NativeModule getModule(String name, ReactApplicationContext reactContext) {
+        if (name.equals(RNPowermanagerModuleImpl.NAME)) {
+            return new RNPowermanagerModule(reactContext);
+        }
+        return null;
+    }
+
+    @Override
+    public ReactModuleInfoProvider getReactModuleInfoProvider() {
+        return () -> {
+            final Map<String, ReactModuleInfo> moduleInfos = new HashMap<>();
+            boolean isTurboModule = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
+            moduleInfos.put(
+                RNPowermanagerModuleImpl.NAME,
+                new ReactModuleInfo(
+                    RNPowermanagerModuleImpl.NAME,
+                    RNPowermanagerModuleImpl.NAME,
+                    false, // canOverrideExistingModule
+                    false, // needsEagerInit
+                    false, // isCxxModule
+                    isTurboModule // isTurboModule
+                ));
+            return moduleInfos;
+        };
     }
 }
