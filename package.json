@@ -15,6 +15,11 @@
   "peerDependencies": {
     "react-native": ">=0.77.0"
   },
+  "peerDependenciesMeta": {
+    "react-native": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "standard-version": "^9.5.0"
   },
